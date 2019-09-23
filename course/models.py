@@ -38,6 +38,6 @@ class Video(models.Model):
 class Courseware(models.Model):
     name = models.CharField(null=False, unique=True, max_length=255)
     content = models.TextField(null=False)
-    courseware_time = models.TextField(null=False)
+    courseware_time = models.TimeField(null=False)
     chapter = models.ForeignKey(to='Chapter', to_field='id', null=False, on_delete=models.CASCADE)
 
